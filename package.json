@@ -1,6 +1,6 @@
 {
   "name": "lyre",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Lightweight, modular GraphQL client built for Typescript",
   "main": "dist/index.js",
   "repository": "https://github.com/meyer9/lyre",
