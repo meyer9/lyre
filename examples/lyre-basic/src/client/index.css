@@ -1,0 +1,15 @@
+body {
+  margin: 0;
+  font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+  line-height: 1.4;
+  margin-top: 50px;
+}
+
+ol {
+  margin-top: 0;
+}

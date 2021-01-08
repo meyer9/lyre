@@ -1,0 +1,38 @@
+enum PlanetType {
+  GAS_GIANT,
+  ICE_GIANT,
+  TERRESTRIAL,
+  DWARF
+}
+
+type Planet {
+  name: String!
+  orbiting: Star!
+  altitude: Float!
+  type: PlanetType!
+  satellites: [Satellite!]!
+}
+
+enum StarType {
+  GIANT,
+  MAIN_SEQUENCE,
+  WHITE_DWARF,
+  RED_DWARF
+}
+
+type Star {
+  name: String!
+  type: StarType!
+  planets: [Planet!]!
+}
+
+type Satellite {
+  orbiting: Planet!
+  name: String!
+}
+
+type Query {
+  planets: [Planet!]!
+  stars: [Star!]!
+  satellites: [Satellite!]!
+}

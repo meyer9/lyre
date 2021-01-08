@@ -1,0 +1,13 @@
+overwrite: true
+schema: "src/graphql/**/*.graphqls"
+documents: "src/client/**/*.graphql"
+generates:
+  src/graphql/generated.ts:
+    config:
+      useIndexSignature: true
+      defaultMapper: Partial<{T}> # support returning partial results
+    plugins:
+      - "typescript"
+      - "typescript-resolvers"
+      - "typescript-operations"
+      - "typed-document-node"

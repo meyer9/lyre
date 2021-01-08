@@ -1,0 +1,6 @@
+query GetPlanets {
+  planets {
+    name
+    altitude
+  }
+}

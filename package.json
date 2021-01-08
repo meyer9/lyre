@@ -1,0 +1,23 @@
+{
+  "name": "lyre",
+  "version": "0.1.0",
+  "description": "Lightweight, modular GraphQL client built for Typescript",
+  "main": "dist/index.js",
+  "repository": "https://github.com/meyer9/lyre",
+  "author": "meyer9",
+  "license": "MIT",
+  "devDependencies": {
+    "@graphql-typed-document-node/core": "^3.1.0",
+    "@types/lodash": "^4.14.167",
+    "@types/react": "^17.0.0",
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "graphql": "^15.4.0",
+    "lodash": "^4.17.20",
+    "react": "^17.0.1"
+  },
+  "scripts": {
+    "build": "tsc"
+  }
+}
