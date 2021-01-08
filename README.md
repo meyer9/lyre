@@ -2,6 +2,12 @@
 
 Lyre is a replacement for Apollo client with similar functionality and a modular structure. Instead of a monolithic design handling caching, pagination, and network requests all within a single client, Lyre breaks down functionality into simple, composable functions.
 
+## Installation
+
+```
+yarn add lyre
+```
+
 ## Basic Structure
 
 Lyre breaks down Apollo into two components:
@@ -19,24 +25,19 @@ The benefit to splitting it up like this is that we can easily write hooks to ha
 ## Example
 
 ```typescript
-import { GetUsersDocument } from 'get-users.graphql';
+import { GetUsersDocument } from "get-users.graphql";
 
 const SomeComponent = () => {
   const fetchUsers = useQuery(GetUsersDocument); // TypedDocumentNode specifies return value of this doc
-  
+
   // fetches every time the variables change. almost exact same format as Apollo
-  const {
-    data: users,
-    error,
-    loading,
-    refetch
-  } = useResult(fetchUsers, {
-    variables: { superuser: true }
+  const { data: users, error, loading, refetch } = useResult(fetchUsers, {
+    variables: { superuser: true },
   });
-  
+
   // refetch every second
   const { polling, start, stop } = usePolledQuery(refetch, 1000);
-}
+};
 ```
 
 Also see [examples/lyre-basic](./examples/lyre-basic)
